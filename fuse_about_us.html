@@ -63,6 +63,19 @@ $(document).ready(function(){
     $(this).addClass("active");
   });
 
+  $(".loader").fadeOut('slow');
+  $(".overlay").click(function(){
+  $('#myVideo').attr('src', '');
+  $(".overlay").fadeOut(); //When clicking on overlay close video popup
+  return false;
+  });
+
+  $(".menu-icon").click(function(){
+  toggleMenu(); //Opens mobile dropdown
+  return false;
+  });
+
+
   Initiate (); //Run Start Functions
 });
 
@@ -75,9 +88,20 @@ function Initiate () {
     $("video").hide();
   }
   $(".overlay").hide();
+  $('.features-carousel li').fadeOut();
   $(".mobile-menu").hide();
+  $("#seventy-box").show();
+  $("#ten-box").hide();
+  $("#twenty-box").hide();
 
 }
+
+function clientsChangeContent() {
+  $('.clients-carousel li').hide();
+  $('.clients-carousel').append($('.clients-carousel li:nth-child(-n+4)'));
+  $('.clients-carousel li:nth-child(-n+4)').fadeIn('slow');
+}
+
 
 //Youtube video popup function
 function VideoPopup (videoId) {
@@ -87,23 +111,24 @@ function VideoPopup (videoId) {
 }
 
 // Fuse video pop up
-function FuseVideoPopup(fuseurl) {
+function FuseVideoPopup(fuseLink) {
+  var fuseurl = fuseLink;
+  // $('#myVideo').attr('src', fuseurl);
+
   function addSourceToVideo(element, src, type) {
     var source = document.createElement('source');
     source.src = src;
     source.type = type;
+
     $(source).appendTo(element);
   }
+
   video = $('#myFuseVideo');
   addSourceToVideo(video, fuseurl, 'video/ogg');
+
   $(".overlay").fadeIn();
 }
 
-$(".overlay").click(function(){
-  $('#myFuseVideo').attr('src', '');
-  $(".overlay").fadeOut(); //When clicking on overlay close video popup
-  return false;
-});
 
 function toggleMenu () {
   if (!menuOpen) {
@@ -172,7 +197,7 @@ recordHistory: true,
 //Design
 controlArrows: false,
 verticalCentered: true,
-sectionsColor: ['rgba(253, 251, 253, 1.0)', 'rgb(253, 251, 253)', 'rgba(0,0,0,0.6)', '#fff', 'rgba(255,255,255,0.95)', '#fff','rgba(255,255,255,0.95)', '#fff', '#fff', 'rgba(255,255,255,0)'],
+sectionsColor: ['rgba(253, 251, 253, 1.0)', 'rgb(253, 251, 253)', 'rgba(0,0,0,0.6)', 'rgba(253, 251, 253, 1.0)', 'rgba(253, 251, 253, 1.0)', '#fff','rgba(255,255,255,0.95)', '#fff', '#fff', 'rgba(255,255,255,0)'],
 paddingTop: '3em',
 paddingBottom: '10px',
 fixedElements: '#header, .footer',
@@ -186,11 +211,11 @@ slideSelector: '.slide',
 
 //events
 onLeave: function(index, nextIndex, direction){
-  if (nextIndex === 7) {
-    $(".seventy-text p, .twenty-text p, .ten-text p, .seventy-text h3, .twenty-text h3, .ten-text h3").delay(600).removeClass("text-init");
+  if (nextIndex === 4) {
+    $(".animate").addClass("bounce-animation");
   }
-  if (index === 7) {
-    $(".seventy-text p, .twenty-text p, .ten-text p, .seventy-text h3, .twenty-text h3, .ten-text h3").addClass("text-init");
+  if (index === 5) {
+    $(".animate").addClass("bounce-animation");
   }
 },
 afterLoad: function(anchorLink, index){   
@@ -283,48 +308,82 @@ onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex)
     <div class="col-xs-12 col-md-10 col-md-offset-1">
      <p>The company has been through a recent round of funding and the team is growing rapidly. Currently, the organisation is made up of 55 employees. The main product is the Fuse platform, entirely cloud-based using Amazon Web Services build on Ruby on Rails and available on all devices supporting iOS and Android systems.</p>
     </div>
-    <div class="col-xs-12 col-md-10 col-md-offset-1">
-     <p>As well as the platform, Fuse Universal offers professional services such as Fuse Create and Fuse Consult. Fuse Universal runs its own foundation called FuseSchool, which is a non-profit arm of the organisation offering educational videos to children and adults across the world via YouTube and the FuseSchool platform.</p>
-    </div>
-    <img class="comms icon" src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/comms.svg">
-    <img class="video icon" src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/video.svg">
-    <img class="blended icon" src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/blended.svg">
-    <img class="social icon" src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/social.svg">
-    <div class="vertical-line">
-      <div class="arrow-down"><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
+    <div>
+      <img class="comms icon" src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/comms.svg">
+      <img class="video icon" src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/video.svg">
+      <img class="blended icon" src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/blended.svg">
+      <img class="social icon" src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/social.svg">
+      <div class="vertical-line">
+        <div class="arrow-down"><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
+      </div>
     </div>
   </div>
 
-    <div class="section" id="sectionB">
-    <h1>Company Overview</h1>
-<!--     <button type="submit" onClick="FuseVideoPopup('https://fusion-universal-videos-beta.s3-eu-west-1.amazonaws.com/74e4932d3a0f14c67cda3bb70e35b3e2.mp4')" class="primary-button">Fuse Story</button> -->
-      <div class="vertical-line-top">
-        <div class="arrow-down"><i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
+    <div class="section container" id="sectionB">
+      <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <h1>Company Overview</h1>
+          <p>As well as the platform, Fuse Universal offers professional services such as Fuse Create and Fuse Consult. Fuse Universal runs its own foundation called FuseSchool, which is a non-profit arm of the organisation offering educational videos to children and adults across the world via YouTube and the FuseSchool platform.</p>
+          <button type="submit" onClick="FuseVideoPopup('https://fusion-universal-videos-beta.s3-eu-west-1.amazonaws.com/74e4932d3a0f14c67cda3bb70e35b3e2.mp4');" class="primary-button">Fuse Story</button>
+        </div>
       </div>
-        <iframe width="60%" height="60%" src="https://www.youtube.com/embed/7KWkao73HuU" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <div class="section container" id="sectionC">
-    <div class="col-xs-12 col-md-10 col-md-offset-1">
-      <img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/content-image-23.png" style="width: 100%;position: relative;right: 20px;">
-      <h1>Our History</h1>
-      <p>The core team at Fuse was born out of the E-Learning company Fuel and continues its legacy of quality and innovation. Following Fuel and during a year of non-compete, Steve Dineen, CEO and Founder, set himself an immense goal; to create a social enterprise that would provide worldwide access to high-quality education, completely free of charge.</p>
-      <p>It was this challenge to ‘revolutionise the education system’ that drove Fuse’s innovation and led to the creation of the transformative, cutting edge technology and content creation methodology that underpins Fuse today. Steve quickly realised that these disruptive ideas that were laying the foundations of The Fuse School could also be applied to the corporate world; this innovation quickly made waves in the Learning and Development sector in the UK</p>
-
-      <button type="submit" onClick="VideoPopup('NSAvxEVbinU')" class="primary-button">Fuse Story</button>
+      <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <img src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/content-image-23.png" style="width: 100%;position: relative;right: 20px;">
+          <h1>Our History</h1>
+          <p>The core team at Fuse was born out of the E-Learning company Fuel and continues its legacy of quality and innovation. Following Fuel and during a year of non-compete, Steve Dineen, CEO and Founder, set himself an immense goal; to create a social enterprise that would provide worldwide access to high-quality education, completely free of charge.</p>
+          <p>It was this challenge to ‘revolutionise the education system’ that drove Fuse’s innovation and led to the creation of the transformative, cutting edge technology and content creation methodology that underpins Fuse today. Steve quickly realised that these disruptive ideas that were laying the foundations of The Fuse School could also be applied to the corporate world; this innovation quickly made waves in the Learning and Development sector in the UK</p>
+          <button type="submit" onClick="VideoPopup('NSAvxEVbinU');" class="primary-button">Fuse Story</button>
+        </div>
+      </div>
     </div>
 
+    <div class="section container" id="sectionD">
+      <div class="row">       
+        <div class="col-xs-12 col-md-5 col-md-offset-1">
+          <h1>Fuse Family</h1>
+          <p>As well as employing some of the most experienced and talented individuals from within the learning, design and customer service industry, Fuse boasts the best of breed partners and ambassadors from across the globe.</p>
+          <p>If you would like to join the Fuse Family please get in touch and let us know why you would like to join the Fuse Family and what you believe you could bring to the team.</p>
+          <button class="primary-button"><a style="color: #fff" href="https://fuse-universal.workable.com/">Apply here</a></button>
+          <button type="submit" onClick="FuseVideoPopup('https://fusion-universal-videos-beta.s3-eu-west-1.amazonaws.com/91d6979746f2416a74430ceb746bfe4a.mp4');" class="primary-button">Job Application Video</button>
+        </div>
+        <div class="col-md-5">
+          <img class="animate img-responsive" src="https://s3-eu-west-1.amazonaws.com/fuse-public-assets/Website3/images/intro.gif">
+        </div>
+      </div>
     </div>
 
-    <div class="section" id="section4">
-    <h1>section4</h1>
+    <div class="section container" id="sectionE">
+      <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <h1>Our Offices and Partners</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-7 col-md-offset-1">
+          <p class="platform-title" style="margin-left:0;color:#ed1e79;text-align: left;">L O N D O N</p>
+          <p style="text-align: left;">Fuse Universal is based within the European Tech City of Shoreditch. Our offices are located just minutes from Old Street roundabout and are home to full-time Fuse employees across 2 floors. Our London HQ is home to the core Fuse business with design, marketing, implementation, product, finance, sales and customer service teams all located here.</p>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <div class="" style="background-image: url(http://news.galliardhomes.com/uploads/images//0e8aa5aff7ee0026b2343cb91f6d816d7ad13c90_c.jpg); background-position: center; background-size: cover; min-height: 200px; width: 100%;"></div>
+        </div>
+      </div>      
+      <div class="row margin-top">
+        <div class="col-xs-12 col-md-3 col-md-offset-1">
+          <div class="" style="background-image: url(http://www.mrcapetown.co.za/wp-content/uploads/2011/08/cape-town-photo1.jpg); background-position: center; background-size: cover; min-height: 200px; width: 100%;"></div>
+        </div>
+        <div class="col-xs-12 col-md-7">
+          <p class="platform-title" style="margin-left:0;color:#ed1e79;text-align: right;">C A P E  T O W N</p>
+          <p style="text-align: right;">In addition to our central head office in London, we also have a host of experienced designers and animators in our Cape Town office. It is here where much of our world famous FuseSchool content is beautifully crafted by our design team.</p>
+        </div>
+      </div>
+
     </div>
 
-    <div class="section" id="section5">
-    <h1>section5</h1>
-    </div>
-
-    <div class="section" id="section6">
+    <div class="section" id="sectionF">
     <h1>section6</h1>
     </div>
 
@@ -370,8 +429,7 @@ onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex)
 
 <div class="overlay">
   <div class="popup">
-    <video id="myFuseVideo" width="50%" height="50%" controls autoplay>
-    </video>
+    <iframe id="myFuseVideo" width="100%" height="100%" controls autoplay src=""></iframe>
   </div>
 </div>
 
@@ -434,7 +492,7 @@ onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex)
         100% {transform: scale(1);}
     }
 
-    #sectionA img.icon {
+    #sectionA img.icon, .bounce-animation {
       display: block;
       position: absolute;
       animation-name: bounceIn;
