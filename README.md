@@ -15,7 +15,7 @@ began. Initially I worked on large projects using Javascript, JQuery and
 AngularJS to display visuals using data from our clients API. Following this I
 went on to work on a social learning web app set in a Backbone-Marionette stack. Most recently I have been working with ReactJS / Redux and GraphQL, integrating with APIs and creating simple APIs in Node.js.
 
-    ![gaming controller](images/gamecolour.svg "lambro")
+    ![gaming controller](./images/gamecolour.svg "lambro")
 
 * **Style** I have had a lot of experience with CSS throughout my coding life,
 starting with the Front End course at GA and throughout my career as a Front End
