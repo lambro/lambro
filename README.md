@@ -27,14 +27,14 @@ fully responsive pages and components to design, working with designers to bring
 their flat designs to life with animations and consideration of the full UX
 experience on interactive platforms.
 
-    ![books](/images/books.svg "lambro")
+    ![books](https://github.com/lambro/lambro/blob/master/images/books.svg "lambro")
 
 * **Production** Working with teams of local and remote developers I have had
 valuable experience working with GIT on collaborative projects and with Webpack,
 Circle CI, QA engineers and unit testing as integral parts of my day to day work
 processes.
 
-    ![trainers](images/trainerscolour.svg "lambro")
+    ![trainers](https://github.com/lambro/lambro/blob/master/images/trainerscolour.svg "lambro")
 
 * **Integration** a front end developer integration and collaboration with other
 developers is an essential skill, I worked in a .NET stack at Durable,
@@ -45,4 +45,4 @@ KintoHub, where we worked in microservices and a complete separation of
 interests. the front end communicated with back end services exclusively via
 APIs, using REST at first and then via GraphQL.
 
-![me sayng wut](images/colourmoi.svg "lambro")
+![me sayng wut](https://github.com/lambro/lambro/blob/master/images/colourmoi.svg "lambro")
