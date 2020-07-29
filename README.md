@@ -27,7 +27,7 @@ fully responsive pages and components to design, working with designers to bring
 their flat designs to life with animations and consideration of the full UX
 experience on interactive platforms.
 
-    ![books](images/books.svg "lambro")
+    ![books](/images/books.svg "lambro")
 
 * **Production** Working with teams of local and remote developers I have had
 valuable experience working with GIT on collaborative projects and with Webpack,
