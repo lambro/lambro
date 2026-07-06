@@ -1,48 +1,59 @@
 # Laura Ambrose
 
+## UI Technical Artist | Software Engineer
+
+Hi! I'm Laura, a UI Technical Artist based in Singapore with a software engineering background and over nine years of professional experience spanning software engineering and AAA game development.
+
+I enjoy working at the intersection of programming, technical art and design, creating polished user experiences while collaborating closely with artists, designers and engineers.
+
+My background includes frontend development, UI implementation, scripting and technical problem solving. More recently I've been expanding my experience in Unreal Engine, Lua and C++, while exploring the wider technical art pipeline through character sculpting in ZBrush.
+
 ---
 
-### TLDR
+## Current Focus
 
-Front End Developer, based in Singapore, working most recently with **React**
-and **Redux**.
+- UI Technical Art
+- Unreal Engine
+- Lua
+- C++ (currently developing)
+- ZBrush character sculpting
+- AI-assisted software development
 
 ---
 
+## Technologies
 
-* **JavaScript** I have been working with Javascript in various forms since I
-began. Initially I worked on large projects using Javascript, JQuery and
-AngularJS to display visuals using data from our clients API. Following this I
-went on to work on a social learning web app set in a Backbone-Marionette stack. Most recently I have been working with ReactJS / Redux and GraphQL, integrating with APIs and creating simple APIs in Node.js.
+### Game Development
 
-    ![gaming controller](https://github.com/lambro/lambro/blob/master/images/gamecolour.svg "lambro")
+- Unreal Engine
+- UI Implementation
+- Lua
+- C++ (currently developing)
 
-* **Style** I have had a lot of experience with CSS throughout my coding life,
-starting with the Front End course at GA and throughout my career as a Front End
-developer. CSS has changed significantly over the years, now sometimes replacing
-the need for JavaScript. I have used pure CSS, and preprocessors such as SASS,
-SCSS and LESS. Experimenting with CSS is a lot of fun, and more recently I have
-been playing with SVG design and animation. In my day to day work life I build
-fully responsive pages and components to design, working with designers to bring
-their flat designs to life with animations and consideration of the full UX
-experience on interactive platforms.
+### Programming
 
-    ![books](https://github.com/lambro/lambro/blob/master/images/books.svg "lambro")
+- JavaScript
+- TypeScript
+- React
+- Node.js
+- REST APIs
+- GraphQL
 
-* **Production** Working with teams of local and remote developers I have had
-valuable experience working with GIT on collaborative projects and with Webpack,
-Circle CI, QA engineers and unit testing as integral parts of my day to day work
-processes.
+### Art
 
-    ![trainers](https://github.com/lambro/lambro/blob/master/images/trainerscolour.svg "lambro")
+- ZBrush
+- Photoshop
 
-* **Integration** a front end developer integration and collaboration with other
-developers is an essential skill, I worked in a .NET stack at Durable,
-integrating with C# in Umbraco and Sitecore CMS systems. Following this I went
-on to work with a full stack team at Fuse where we were integrating Ruby with
-Backbone Marionette. My most recent experience was with a React stack at
-KintoHub, where we worked in microservices and a complete separation of
-interests. the front end communicated with back end services exclusively via
-APIs, using REST at first and then via GraphQL.
+### Development
 
-![me sayng wut](https://github.com/lambro/lambro/blob/master/images/colourmoi.svg "lambro")
+- Git
+- Perforce
+- Agile Development
+
+---
+
+## About this GitHub
+
+Most of my professional and private work is in private repositories, so this profile doesn't fully represent my day-to-day development work. I'm hoping to share more personal projects here over time as I continue exploring game development, technical art and 3D character creation.
+
+Thanks for stopping by!
