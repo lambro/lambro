@@ -1,34 +1,34 @@
 # Laura Ambrose
 
-## UI Technical Artist | Software Engineer
+## UI Technical Artist with a Software Engineering Background
 
-Hi! I'm Laura, a UI Technical Artist based in Singapore with a software engineering background and over nine years of professional experience spanning software engineering and AAA game development.
+Hi! I'm Laura, a UI Technical Artist based in Singapore with over nine years of professional experience spanning web development and AAA game development.
 
-I enjoy working at the intersection of programming, technical art and design, creating polished user experiences while collaborating closely with artists, designers and engineers.
+I enjoy building intuitive player experiences by combining programming, technical art and close collaboration with artists, designers and engineers. I'm particularly interested in the intersection of programming, UI and technical art, where engineering and creativity come together to solve interesting problems.
 
-My background includes frontend development, UI implementation, scripting and technical problem solving. More recently I've been expanding my experience in Unreal Engine, Lua and C++, while exploring the wider technical art pipeline through character sculpting in ZBrush.
+My background includes frontend development, UI implementation, scripting and technical problem solving. More recently I've been focused on Unreal Engine, Lua and C++, while exploring the wider technical art pipeline through character sculpting in ZBrush.
 
 ---
 
 ## Current Focus
 
-- UI Technical Art
 - Unreal Engine
-- Lua
+- UI Technical Art
 - C++ (currently developing)
-- ZBrush character sculpting
-- AI-assisted software development
+- Lua
+- Character sculpting in ZBrush (currently developing)
+- Software development and AI-assisted software development
 
 ---
 
-## Technologies
+## Technical Skills
 
 ### Game Development
 
 - Unreal Engine
 - UI Implementation
 - Lua
-- C++ (currently developing)
+- C++
 
 ### Programming
 
@@ -39,9 +39,8 @@ My background includes frontend development, UI implementation, scripting and te
 - REST APIs
 - GraphQL
 
-### Art
+### Digital Art
 
-- ZBrush
 - Photoshop
 
 ### Development
@@ -54,6 +53,8 @@ My background includes frontend development, UI implementation, scripting and te
 
 ## About this GitHub
 
-Most of my professional and private work is in private repositories, so this profile doesn't fully represent my day-to-day development work. I'm hoping to share more personal projects here over time as I continue exploring game development, technical art and 3D character creation.
+Most of my professional and personal work is in private repositories, so this profile doesn't fully represent my day-to-day development work.
 
-Thanks for stopping by!
+As I continue exploring game development and technical art, I hope to share more personal projects and experiments here over time.
+
+Thanks for stopping by! 👋
